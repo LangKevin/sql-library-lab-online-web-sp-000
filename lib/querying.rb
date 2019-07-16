@@ -18,7 +18,7 @@ inner join authors on authors.id = subgenres.id
 end
 
 def select_series_title_with_most_human_characters
-  "select id, title from series where id in
+  "select title from series where id in
 (select series_id from characters group by series_id order by count(*) LIMIT 1)"
 end
 
